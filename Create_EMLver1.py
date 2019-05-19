@@ -19,7 +19,7 @@ from email import generator
 
 #-------------------------------
 # 宛先アドレスの読み込み
-a = open("mail_address.txt", "r", encoding="utf-8")
+a = open("mail_address.txt", "r", encoding="ISO-2022-JP")
 a1 = a.readlines()
 a2 = ",".join(a1)
 address = a2.replace("\n", "")
@@ -37,7 +37,7 @@ title = t.read()
 t.close()
 #-------------------------------
 # お名前（メール本文）の読み込み
-n = open("customer_name.txt", "r", encoding="utf-8")
+n = open("customer_name.txt", "r", encoding="ISO-2022-JP")
 name = n.read()
 
 #print(name)
@@ -45,7 +45,7 @@ name = n.read()
 n.close()
 #-------------------------------
 #メール本文の読み込み
-h = open("mail_body.txt", "r", encoding="utf-8")
+h = open("mail_body.txt", "r", encoding="ISO-2022-JP")
 honbun = h.read()
 
 #print(honbun)
