@@ -68,7 +68,7 @@ body = name + "\n" + " \n" +" \n" + honbun
 
 
 encoding = 'utf-8'
-sender_name = Header('Takashi Nukajiri', encoding).encode()
+sender_name = Header('Takashi Numajiri', encoding).encode()
 
 message = MIMEText(body.encode(encoding), 'plain', _charset=encoding)
 message['Subject'] = Header(subject, encoding)
@@ -76,7 +76,7 @@ message['From'] = formataddr((sender_name, from_addr))
 message['To'] = to_addr
 message.add_header('X-Unsent', '1')
 
-with open('Mail01.eml', 'w') as eml:
+with open('Mail.eml', 'w') as eml:
     gen = generator.Generator(eml)
     gen.flatten(message)
 
